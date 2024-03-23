@@ -21,7 +21,7 @@ export const todoreducer = (initialState, action) => {
 
         case 'Update Todo':
             return initialState.map(todo=>{
-                if(todo.id === payload){
+                if(todo.id === action.payload.id){
                     return{
                         ...todo,
                         description: action.payload.description
