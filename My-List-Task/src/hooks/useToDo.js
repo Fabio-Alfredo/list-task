@@ -4,6 +4,10 @@ import { todoreducer } from "../todoreducer"
 export const useToDo = () => {
 
     const initialState = []
+    
+    const init=()=>{
+        return JSON.parse(localStorage.getItem('todos')) || []
+    }
 
     const [todos, dispatch] = useReducer(todoreducer, initialState, init)
 
@@ -14,9 +18,7 @@ export const useToDo = () => {
         localStorage.setItem('todos', JSON.stringify(todos))
     }, [todos])
 
-    const init=()=>{
-        return JSON.parse(localStorage.getItem('todos')) || []
-    }
+
 
     const handleNewTodo = (todo) => {
         const action = {
@@ -54,6 +56,9 @@ export const useToDo = () => {
     }
 
     return {
+        todos,
+        todosCount,
+        peddingTodosCount,
         handleNewTodo,
         handleDeleteTodo,
         handleCompleteTodo,

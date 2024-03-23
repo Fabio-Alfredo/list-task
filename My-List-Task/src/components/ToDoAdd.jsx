@@ -1,8 +1,13 @@
 import React from "react"
 
 export default function ToDoAdd() {
+
+    const onFormSubmit=(e)=>{
+        e.preventDefault()
+    }
+
     return (
-        <form >
+        <form onSubmit={onFormSubmit}>
             <input
                 className="input-add"
                 type="text"
