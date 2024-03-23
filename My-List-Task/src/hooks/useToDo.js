@@ -7,6 +7,9 @@ export const useToDo = () => {
 
     const [todos, dispatch] = useReducer(todoreducer, initialState, init)
 
+    const todosCount = todos.length
+    const peddingTodosCount = todos.filter(todo=>!todo.done).length
+
     useEffect(() => {
         localStorage.setItem('todos', JSON.stringify(todos))
     }, [todos])
