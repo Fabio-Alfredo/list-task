@@ -8,7 +8,7 @@ export default function ToDoItem({ todo, handleDeleteTodo, handleCompleteTodo, h
             <span
                 onClick={() => handleCompleteTodo(todo.id)}
             >
-                <label htmlFor="" className="container-done"></label>
+                <label className={`container-done ${todo.done ? 'active':''}` }></label>
             </span>
 
             <ToDoUpdate todo={todo} handleUpdateTodo={handleUpdateTodo} />
