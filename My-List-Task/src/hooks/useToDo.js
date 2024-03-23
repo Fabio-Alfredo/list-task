@@ -1,4 +1,4 @@
-import { useReducer } from "react"
+import { useEffect, useReducer } from "react"
 import { todoreducer } from "../todoreducer"
 
 export const useToDo = () => {
@@ -6,6 +6,14 @@ export const useToDo = () => {
     const initialState = []
 
     const [todos, dispatch] = useReducer(todoreducer, initialState, init)
+
+    useEffect(() => {
+        localStorage.setItem('todos', JSON.stringify(todos))
+    }, [todos])
+
+    const init=()=>{
+        return JSON.parse(localStorage.getItem('todos')) || []
+    }
 
     const handleNewTodo = (todo) => {
         const action = {
