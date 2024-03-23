@@ -15,8 +15,8 @@ function App() {
           <h3>pendientes: 3</h3>
         </div>
         <div className='add-to-do'>
-           <h3>New task</h3>
-           <ToDoAdd/>
+          <h3>New task</h3>
+          <ToDoAdd />
         </div>
         <ToDoList />
       </div>
