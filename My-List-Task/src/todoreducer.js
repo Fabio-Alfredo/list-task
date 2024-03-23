@@ -13,7 +13,7 @@ export const todoreducer = (initialState, action) => {
                 if(todo.id === action.payload){
                     return{
                         ...todo,
-                        done:!todo.done
+                        done: !todo.done,
                     }
                 }
                 return todo

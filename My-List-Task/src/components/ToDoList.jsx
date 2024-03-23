@@ -5,7 +5,7 @@ export default function ToDoList({ todos, handleDeleteTodo, handleCompleteTodo, 
     return (
         <ul>
             {
-                todos.map(todo => {
+                todos.map(todo => (
                     (
                         <ToDoItem
                             key={todo.id}
@@ -15,7 +15,7 @@ export default function ToDoList({ todos, handleDeleteTodo, handleCompleteTodo, 
                             handleUpdateTodo={handleUpdateTodo}
                         />
                     )
-                }
+                )
                 )
             }
 

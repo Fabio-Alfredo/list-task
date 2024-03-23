@@ -6,7 +6,7 @@ export default function ToDoItem({ todo, handleDeleteTodo, handleCompleteTodo, h
     return (
         <li>
             <span
-            onClick={()=>handleCompleteTodo(todo.id)}
+                onClick={() => handleCompleteTodo(todo.id)}
             >
                 <label htmlFor="" className="container-done"></label>
             </span>
@@ -15,7 +15,7 @@ export default function ToDoItem({ todo, handleDeleteTodo, handleCompleteTodo, h
 
             <button
                 className="btn-delete"
-                onClick={()=>handleDeleteTodo(todo.id)}
+                onClick={() => handleDeleteTodo(todo.id)}
             >
                 <BsTrash />
             </button>

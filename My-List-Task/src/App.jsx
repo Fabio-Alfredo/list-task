@@ -17,7 +17,7 @@ function App() {
 
   return (
     <>
-      <div className='car-to-do'>
+      <div className='card-to-do'>
         <h1>My tasks</h1>
         <div className='counter-to-do'>
           <h3>N task: {todosCount}</h3>
@@ -25,9 +25,9 @@ function App() {
         </div>
         <div className='add-to-do'>
           <h3>New task</h3>
-          <ToDoAdd handleNewTodo={handleNewTodo}/>
+          <ToDoAdd handleNewTodo={handleNewTodo} />
         </div>
-        <ToDoList 
+        <ToDoList
           todos={todos}
           handleDeleteTodo={handleDeleteTodo}
           handleCompleteTodo={handleCompleteTodo}

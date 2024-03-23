@@ -9,7 +9,7 @@ export default function ToDoUpdate({todo, handleUpdateTodo}){
                 type="text"
                 placeholder="insert task"
                 value={todo.description}
-                onChange="" >
+                >
             </input>
             <button className="btn-edit" type="submit"><AiOutlineEdit /></button>
         </form>

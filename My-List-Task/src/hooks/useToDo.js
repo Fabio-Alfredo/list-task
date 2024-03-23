@@ -4,7 +4,7 @@ import { todoreducer } from "../todoreducer"
 export const useToDo = () => {
 
     const initialState = []
-    
+
     const init=()=>{
         return JSON.parse(localStorage.getItem('todos')) || []
     }
@@ -23,7 +23,7 @@ export const useToDo = () => {
     const handleNewTodo = (todo) => {
         const action = {
             type: "Add Todo",
-            payload: todo
+            payload: todo,
         }
 
         dispatch(action)
